@@ -8,8 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-redux": "^7.1.22",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
@@ -27,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.1",
     "prettier-plugin-organize-imports": "^2.3.4",
+    "redux-devtools-extension": "^2.13.9",
     "stylelint": "^14.5.0",
     "stylelint-config-css-modules": "^3.0.0",
     "stylelint-config-prettier": "^9.0.3",
