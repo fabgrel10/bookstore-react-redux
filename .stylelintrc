@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "stylelint-config-css-modules",
+    "stylelint-config-prettier",
+    "stylelint-config-prettier-scss",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "at-rule-no-vendor-prefix": null,
+    "declaration-property-value-disallowed-list": null,
+    "function-no-unknown": null,
+    "indentation": [2],
+    "max-nesting-depth": [
+      1,
+      {
+        "ignore": ["blockless-at-rules"],
+        "ignoreAtRules": ["/^include$/", "/^if$/", "/^each$/"]
+      }
+    ],
+    "plugin/selector-bem-pattern": {
+      "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+      "componentSelectors": {
+        "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+      },
+      "preset": "bem"
+    },
+    "property-no-vendor-prefix": null,
+    "scss/at-extend-no-missing-placeholder": true,
+    "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "selector-class-pattern": "",
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute"]
+      }
+    ],
+    "value-no-vendor-prefix": null
+  }
+}
