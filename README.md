@@ -8,7 +8,7 @@
 
 > "Bookstore" is a website for all fans of books.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/assets/images/app_screenshot.png)
 
 ## Live Demo
 
