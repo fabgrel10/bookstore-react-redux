@@ -3,8 +3,3 @@ type Book = {
   title: string;
   author: string;
 };
-
-type BookAction = {
-  type: string;
-  payload: Book & number;
-};

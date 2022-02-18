@@ -19,7 +19,9 @@
     "jest",
     "jsx-a11y",
     "prettier",
-    "react"
+    "react",
+    "react-hooks",
+    "react-redux"
   ],
   "extends": [
     "eslint:recommended",
@@ -30,6 +32,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
+    "plugin:react-redux/recommended",
     "prettier"
   ],
   "globals": {
@@ -39,6 +42,10 @@
     "react": {
       "version": "detect"
     },
+    "import/core-modules": [
+      "redux",
+      "redux-thunk"
+    ],
     "import/extensions": [
       ".js",
       ".jsx",

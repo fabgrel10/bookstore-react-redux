@@ -1,10 +1,11 @@
+import { AnyAction } from 'redux';
 import { ADD_BOOK, REMOVE_BOOK } from './actionTypes';
 
 const initialState: Book[] = [];
 
 export const booksReducer = (
   state: Book[] = initialState,
-  action: BookAction
+  action: AnyAction
 ): Book[] => {
   switch (action.type) {
     case ADD_BOOK:
