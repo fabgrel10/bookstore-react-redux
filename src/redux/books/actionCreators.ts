@@ -1,15 +1,15 @@
 import { ADD_BOOK, REMOVE_BOOK } from './actionTypes';
 
-export const addBook = (book: Book) => {
+export const addBook = (payload: Data) => {
   return {
     type: ADD_BOOK,
-    payload: book
+    payload
   };
 };
 
-export const removeBook = (book: Book) => {
+export const removeBook = (payload: Data) => {
   return {
     type: REMOVE_BOOK,
-    payload: book
+    payload
   };
 };

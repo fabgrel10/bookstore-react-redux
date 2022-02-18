@@ -1,17 +1,10 @@
-type Data = {
+type Book = {
   id: number;
   title: string;
-};
-
-type BooksState = {
-  books: Array<Data>;
-};
-
-type CategoriesState = {
-  categories: Array<Data>;
+  author: string;
 };
 
 type BookAction = {
   type: string;
-  payload: Data;
+  payload: Book & number;
 };

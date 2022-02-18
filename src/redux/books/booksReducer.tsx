@@ -1,22 +1,16 @@
-const initialState: BooksState = {
-  books: []
-};
+import { ADD_BOOK, REMOVE_BOOK } from './actionTypes';
+
+const initialState: Book[] = [];
 
 export const booksReducer = (
-  state: BooksState = initialState,
+  state: Book[] = initialState,
   action: BookAction
-) => {
+): Book[] => {
   switch (action.type) {
-    case 'ADD_BOOK':
-      return {
-        ...state,
-        books: [...state.books, action.payload]
-      };
-    case 'REMOVE_BOOK':
-      return {
-        ...state,
-        books: state.books.filter(book => book.id !== action.payload.id)
-      };
+    case ADD_BOOK:
+      return [...state, action.payload];
+    case REMOVE_BOOK:
+      return state.filter(book => book.id !== action.payload);
     default:
       return state;
   }
