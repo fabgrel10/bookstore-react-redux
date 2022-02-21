@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 const CategoriesPage = () => {
   return (
     <div>
-      <h1>Categories Page</h1>
+      <h2>Categories Page</h2>
+      <p>Under construction</p>
       <Link to="/">Home</Link>
     </div>
   );

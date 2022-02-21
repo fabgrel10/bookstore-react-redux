@@ -1,11 +1,8 @@
-const initialState: BooksState = {
+const initialState = {
   books: []
 };
 
-export const booksReducer = (
-  state: BooksState = initialState,
-  action: BookAction
-) => {
+export const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
       return {
