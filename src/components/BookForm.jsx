@@ -1,5 +1,7 @@
+import { nanoid } from 'nanoid';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook } from '../redux/books/actionCreators';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -7,11 +9,32 @@ const BookForm = () => {
   const [bookId, setBookId] = useState('');
   const [category, setCategory] = useState('Fiction');
 
+  const dispatch = useDispatch();
   const categories = useSelector(state => state.categories);
 
-  function submitBookToStore() {}
+  function submitBookToStore(e) {
+    e.preventDefault();
 
-  function removeBook() {}
+    if (!title || !author) {
+      return;
+    }
+
+    const newBook = {
+      item_id: nanoid(3),
+      title,
+      author,
+      category
+    };
+    dispatch(addBook(newBook));
+    setTitle('');
+    setAuthor('');
+  }
+
+  function removeBook(e) {
+    e.preventDefault();
+    dispatch(bookId);
+    setBookId('');
+  }
 
   return (
     <form>
