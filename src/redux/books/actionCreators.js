@@ -7,10 +7,10 @@ export const addBook = book => {
   };
 };
 
-export const removeBook = book => {
+export const deleteBook = id => {
   return {
     type: REMOVE_BOOK,
-    payload: book
+    payload: id
   };
 };
 

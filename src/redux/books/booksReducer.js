@@ -9,7 +9,7 @@ export const booksReducer = (state = initialState, action) => {
     case GET_BOOKS:
       return state;
     case REMOVE_BOOK:
-      return state.books.filter(book => book.id !== action.payload.id);
+      return [...state.filter(book => book.item_id !== action.payload)];
     default:
       return state;
   }
