@@ -1,11 +1,10 @@
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/actionCreators';
+import { asyncAddBook } from '../redux/books/actionCreators';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('Fiction');
 
   const dispatch = useDispatch();
@@ -14,19 +13,17 @@ const BookForm = () => {
   function submitBookToStore(e) {
     e.preventDefault();
 
-    if (!title || !author) {
+    if (!title) {
       return;
     }
 
     const newBook = {
       item_id: nanoid(3),
       title,
-      author,
       category
     };
-    dispatch(addBook(newBook));
+    dispatch(asyncAddBook(newBook));
     setTitle('');
-    setAuthor('');
   }
 
   return (
@@ -39,16 +36,6 @@ const BookForm = () => {
         placeholder="Title"
         value={title}
         onChange={e => setTitle(e.target.value)}
-      />
-      <br />
-      <label htmlFor="author">Author:</label>
-      <input
-        type="text"
-        name="author"
-        id="author"
-        placeholder="Author"
-        value={author}
-        onChange={e => setAuthor(e.target.value)}
       />
       <br />
       <label htmlFor="category">Category:</label>

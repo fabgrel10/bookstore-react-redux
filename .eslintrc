@@ -81,6 +81,7 @@
         "tabWidth": 2
       }
     ],
+    "no-console": "warn",
     "no-empty-function": "off",
     "no-nested-ternary": "off",
     "no-param-reassign": "off",
