@@ -27,6 +27,13 @@
   width: 87.5rem;
 }
 
+.Line {
+  border: solid 1px $white;
+  height: 0.125rem;
+  margin: 5.875rem 0 2.313rem;
+  width: 87.5rem;
+}
+
 /* Navbar */
 
 .navbar {
@@ -62,6 +69,37 @@
 }
 
 .navbar__categories {
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  width: 6.563rem;
+}
+
+.navbar__bookstore {
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  height: 2.313rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  width: 15rem;
+}
+
+.books {
+  @include Text-Style-3;
+
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  width: 3.688rem;
+}
+
+.categories {
+  @include Text-Style-3;
+
   height: 1rem;
   margin: 1.125rem 41.5rem 0.688rem 2.563rem;
   opacity: 0.5;

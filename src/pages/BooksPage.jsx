@@ -13,12 +13,14 @@ const BooksPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <Navbar />
-      <br />
-      <BookList />
-      <br />
-      <BookForm />
+    <div className="Bookstore-CMS">
+      <div className="panel-bg">
+        <Navbar />
+        <div className="Line"></div>
+        <BookList />
+        <br />
+        <BookForm />
+      </div>
     </div>
   );
 };
