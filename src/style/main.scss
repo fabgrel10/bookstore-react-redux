@@ -53,6 +53,7 @@ body {
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  position: relative;
   width: 87.5rem;
 }
 
@@ -87,18 +88,17 @@ body {
   width: 6.563rem;
 }
 
-.navbar__user-oval {
+.navbar__user-container {
   border: solid 1px $white;
-  height: 2.813rem;
-  margin: 0 0 0 41.5rem;
-  padding: 0.875rem;
-  width: 2.813rem;
+  bottom: 25px;
+  display: flex;
+  height: 2rem;
+  position: absolute;
+  right: 6.25rem;
 }
 
 .navbar__user-icon {
-  background-color: #0290ff;
-  height: 1.063rem;
-  width: 1.063rem;
+  color: #0290ff;
 }
 
 // Book Component

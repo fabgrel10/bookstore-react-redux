@@ -11,8 +11,11 @@ const Navbar = () => {
       <Link to="/categories">
         <span className="navbar__categories Text-Style-3">CATEGORIES</span>
       </Link>
-      <div className="navbar__user-oval">
-        <i className="fa fa-user navbar__user-icon" aria-hidden="true"></i>
+      <div className="navbar__user-container">
+        <i
+          className="fa fa-user navbar__user-icon fa-2x"
+          aria-hidden="true"
+        ></i>
       </div>
     </div>
   );
