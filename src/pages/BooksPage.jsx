@@ -18,7 +18,6 @@ const BooksPage = () => {
         <Navbar />
         <div className="Line"></div>
         <BookList />
-        <br />
         <BookForm />
       </div>
     </div>

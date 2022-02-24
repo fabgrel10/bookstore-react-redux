@@ -6,11 +6,14 @@ const Navbar = () => {
     <div className="navbar">
       <span className="navbar__bookstore">Bookstore CMS</span>
       <Link to="/">
-        <span className="books Text-Style-3">BOOKS</span>
+        <span className="navbar__books Text-Style-3">BOOKS</span>
       </Link>
       <Link to="/categories">
-        <span className="categories Text-Style-3">CATEGORIES</span>
+        <span className="navbar__categories Text-Style-3">CATEGORIES</span>
       </Link>
+      <div className="navbar__user-oval">
+        <i className="fa fa-user navbar__user-icon" aria-hidden="true"></i>
+      </div>
     </div>
   );
 };

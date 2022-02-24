@@ -10,6 +10,18 @@
 @import "base/fonts";
 
 /* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #121212;
+  font-family: "Roboto Slab", serif;
+}
+
 .Bookstore-CMS {
   background-color: $pale-grey;
   height: 89.625rem;
@@ -44,37 +56,6 @@
   width: 87.5rem;
 }
 
-.navbar__ul li {
-  display: inline-block;
-}
-
-.navbar__logo {
-  color: $azure;
-  font-family: Montserrat;
-  font-size: 1.875rem;
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: bold;
-  height: 2.313rem;
-  letter-spacing: normal;
-  line-height: normal;
-  margin: 0.375rem 2.938rem 0.125rem 0;
-  width: 15rem;
-}
-
-.navbar__books {
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  width: 3.688rem;
-}
-
-.navbar__categories {
-  height: 1rem;
-  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
-  opacity: 0.5;
-  width: 6.563rem;
-}
-
 .navbar__bookstore {
   color: #0290ff;
   font-family: Montserrat, sans-serif;
@@ -89,7 +70,7 @@
   width: 15rem;
 }
 
-.books {
+.navbar__books {
   @include Text-Style-3;
 
   height: 1rem;
@@ -97,11 +78,198 @@
   width: 3.688rem;
 }
 
-.categories {
+.navbar__categories {
   @include Text-Style-3;
 
   height: 1rem;
   margin: 1.125rem 41.5rem 0.688rem 2.563rem;
   opacity: 0.5;
   width: 6.563rem;
+}
+
+.navbar__user-oval {
+  border: solid 1px $white;
+  height: 2.813rem;
+  margin: 0 0 0 41.5rem;
+  padding: 0.875rem;
+  width: 2.813rem;
+}
+
+.navbar__user-icon {
+  background-color: #0290ff;
+  height: 1.063rem;
+  width: 1.063rem;
+}
+
+// Book Component
+
+// Book info section
+.book {
+  background-color: #fff;
+  border: solid 1px $white;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  height: 10.625rem;
+  justify-content: space-between;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  width: 75rem;
+}
+
+.book-col-1 {
+  grid-column: 1;
+}
+
+.book__category {
+  color: $black-two;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  height: 1.125rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  width: 3.063rem;
+}
+
+.book__title {
+  color: $black-two;
+  font-size: 0.875rem;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: lighter;
+  font-weight: bold;
+  height: 1.813rem;
+  letter-spacing: -0.2px;
+  line-height: normal;
+  width: 12.313rem;
+}
+
+.book__author {
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 300;
+  height: 1.188rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 1.5rem;
+  width: 6.688rem;
+}
+
+.book__buttons {
+  background-color: $white;
+  border: none;
+  color: #4386bf;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  margin-right: 1.5rem;
+  padding: 0;
+}
+
+.book__buttons-line {
+  border: solid 1px $white;
+  height: 1.5rem;
+  margin: 0.75rem 1.063rem 0 0.938rem;
+  width: 0.125rem;
+}
+
+// Progress section
+.book-col-2 {
+  display: flex;
+  grid-column: 2;
+}
+
+.book__progress-img {
+  height: 7rem;
+}
+
+.book__progress {
+  color: $black-two;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 2.438rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  width: 4.25rem;
+}
+
+.book__progress-status {
+  color: $black-two;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 1.125rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  width: 5rem;
+}
+
+// Chapter section
+.book-col-3 {
+  grid-column: 3;
+}
+
+.book__current-chapter {
+  color: $black-two;
+  font-size: 0.813rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 300;
+  height: 1.125rem;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  width: 7.875rem;
+}
+
+.book__chapter-number {
+  color: $black-two;
+  font-size: 1rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 300;
+  height: 1.313rem;
+  letter-spacing: -0.4px;
+  line-height: normal;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  width: 4.688rem;
+}
+
+.book__update-progress-button {
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  width: 11.5rem;
+}
+
+.book__update-progress-span {
+  color: #fff;
+  font-size: 0.813rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 100;
+  height: 1.125rem;
+  letter-spacing: 0.5px;
+  line-height: normal;
+  text-align: center;
+  width: 8.938rem;
 }
