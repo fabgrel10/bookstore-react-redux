@@ -273,3 +273,81 @@ body {
   text-align: center;
   width: 8.938rem;
 }
+
+// BookForm component
+
+.form__separator {
+  border: solid 1px $white;
+  height: 0.125rem;
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  width: 75rem;
+}
+
+.form__container {
+  background-color: #fff;
+  border: solid 1px $white;
+  border-radius: 4px;
+  height: 10.625rem;
+  justify-content: space-between;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  width: 75rem;
+}
+
+.form__label-title {
+  color: #888;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  height: 1.5rem;
+  letter-spacing: -0.18px;
+  line-height: normal;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  width: 10.875rem;
+}
+
+.form__row-two {
+  display: flex;
+  grid-row: 2;
+}
+
+.form__input-title {
+  background-color: #fff;
+  border: solid 1px $white;
+  border-radius: 4px;
+  color: $pinkish-grey;
+  font-family: Montserrat;
+  font-size: 1rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  width: 36.5rem;
+}
+
+.form__select-category {
+  background-color: #fff;
+  border: solid 1px $white;
+  border-radius: 4px;
+  color: $pinkish-grey;
+  font-family: Montserrat;
+  font-size: 1rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0;
+}
+
+.form_button {
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+  display: inline;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  width: 11.5rem;
+}
+
+.form_span-button {
+  @include Text-Style;
+
+  height: 1.125rem;
+}
