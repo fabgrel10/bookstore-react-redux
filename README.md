@@ -12,7 +12,8 @@
 
 ## Live Demo
 
-- Coming soon ...
+[Netlify](https://bookstore-redux-microverse.netlify.app/)
+[Surge](https://bookstore-redux-microvers.surge.sh/)
 
 ## Table of Contents
 
