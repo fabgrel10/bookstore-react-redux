@@ -1,26 +1,25 @@
 const initialState = [
   {
     id: 1,
-    category: 'Fiction'
+    category: 'Fiction',
   },
   {
     id: 2,
-    category: 'Non-Fiction'
+    category: 'Non-Fiction',
   },
   {
     id: 3,
-    category: 'Mystery'
+    category: 'Mystery',
   },
   {
     id: 4,
-    category: 'Horror'
+    category: 'Horror',
   },
   {
     id: 5,
-    category: 'Romance'
-  }
+    category: 'Romance',
+  },
 ];
+const categoriesReducer = (state = initialState) => state;
 
-export const categoriesReducer = (state = initialState) => {
-  return state;
-};
+export default categoriesReducer;

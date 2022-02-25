@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-- Coming soon ...
+[Surge](https://bookstore-redux-microvers.surge.sh/)
 
 ## Table of Contents
 

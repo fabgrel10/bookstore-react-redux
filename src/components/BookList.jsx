@@ -9,11 +9,11 @@ const BookList = () => {
     return <p>No books to display</p>;
   } else {
     return (
-      <ul>
+      <>
         {bookList.map(book => (
           <Book book={book} key={nanoid()} />
         ))}
-      </ul>
+      </>
     );
   }
 };

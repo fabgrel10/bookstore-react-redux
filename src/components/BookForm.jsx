@@ -27,26 +27,34 @@ const BookForm = () => {
   }
 
   return (
-    <form>
-      <label htmlFor="title">Title:</label>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        placeholder="Title"
-        value={title}
-        onChange={e => setTitle(e.target.value)}
-      />
-      <br />
-      <label htmlFor="category">Category:</label>
-      <select value={category} onChange={e => setCategory(e.target.value)}>
-        {categories.map(x => (
-          <option key={x.id}>{x.category}</option>
-        ))}
-      </select>
-      <br />
-      <button onClick={submitBookToStore}>Add Book</button>
-    </form>
+    <div className="form__container">
+      <form className="form">
+        <label htmlFor="title" className="form__label-title">
+          ADD NEW BOOK
+        </label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Book title"
+          className="form__input-title"
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+        />
+        <select
+          className="form__select-category"
+          value={category}
+          onChange={e => setCategory(e.target.value)}
+        >
+          {categories.map(x => (
+            <option key={x.id}>{x.category}</option>
+          ))}
+        </select>
+        <button className="form_button" onClick={submitBookToStore}>
+          <span className="form_span-button Text-Style">ADD BOOK</span>
+        </button>
+      </form>
+    </div>
   );
 };
 

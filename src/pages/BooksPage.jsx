@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import BookForm from '../components/BookForm';
 import BookList from '../components/BookList';
 import { asyncGetBooks } from '../redux/books/actionCreators';
+import Navbar from './Navbar';
 
 const BooksPage = () => {
   const dispatch = useDispatch();
@@ -13,14 +13,13 @@ const BooksPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h2>Books Page</h2>
-      <Link to="/categories">Categories</Link>
-      <br />
-      <br />
-      <BookList />
-      <br />
-      <BookForm />
+    <div className="Bookstore-CMS">
+      <div className="panel-bg">
+        <Navbar />
+        <div className="Line"></div>
+        <BookList />
+        <BookForm />
+      </div>
     </div>
   );
 };
