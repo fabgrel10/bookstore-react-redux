@@ -1,0 +1,39 @@
+/* stylelint-disable declaration-colon-newline-after */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@400;700&family=Playfair+Display&family=Raleway&family=Roboto+Slab:wght@300;700&family=Source+Serif+Pro:wght@700&display=swap");
+
+@font-face {
+  font-family: FuturaPT;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  src: local("FuturaPT-Book"),
+    url("./src/fonts/FuturaPT-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  src: local("ProximaNova-Regular"),
+    url("./src/fonts/ProximaNova-Regular.ttf") format("truetype");
+}
+
+@mixin Text-Style {
+  color: $white;
+  font-family: ProximaNova;
+  font-size: 1.063rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+@mixin Text-Style-3 {
+  color: $black-two;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+}
